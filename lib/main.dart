@@ -11,30 +11,92 @@
             ),),
           backgroundColor: Colors.blueAccent[100],
         ),
-        body: Center(
-          child: Column(
-            children: [
-              Text('Sail-fin Molly',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.cyan
-                  )),
-              Text('Giant Sailfin Molly',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.amberAccent
-                  )),
-              Text('Platinum King Balloon Molly ',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black26
-                  )),
+        body: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.all(10),
+              child: (
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Species: ',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          color: Colors.black87
+                      )),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                    child: (
+                        Text('Platinum King Baloon Molly',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15,
+                                color: Colors.black26
+                            ))
+                    ),
+                  )
 
-            ],
-          ),
+                ],
+              )
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+              child: (
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text('Species: ',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              color: Colors.black87
+                          )),
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                        child: (
+                            Text('Platinum King Baloon Molly',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15,
+                                    color: Colors.black26
+                                ))
+                        ),
+                      )
+                    ],
+                  )
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              child: (
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text('Species: ',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              color: Colors.black87
+                          )),
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                        child: (
+                            Text('Platinum King Baloon Molly',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15,
+                                    color: Colors.black26
+                                ))
+                        ),
+                      )
+                    ],
+                  )
+              ),
+            )
+          ]
         ),
         ),
     ));
