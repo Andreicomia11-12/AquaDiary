@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Profile()
-  ),
-  );
+      debugShowCheckedModeBanner: false,
+      home: Profile()
+  ));
 }
-
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -14,123 +13,74 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'AQUA DIARY',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
+      backgroundColor: Colors.white,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(50),
+        child: AppBar(
+          centerTitle: true,
+          backgroundColor: Color(0xFF006D77),
+          title: Text(
+            'AquaCare',
+            style: TextStyle(
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w500,
+              fontSize: 18,
+              color: Colors.white,
+            ),
           ),
         ),
-        backgroundColor: Colors.blueAccent[100],
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 40),
-
-          // Centered title
-          Center(
-            child: Text(
-              'User Profile',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-
-          Center(
-            child: Icon(Icons.person, size: 100,),
-          ),
-          SizedBox(height: 30),
-
-          // Left-aligned label and name
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Column(
-
-              crossAxisAlignment: CrossAxisAlignment.start,
+          Container(
+            width: double.infinity,
+            height: 100,
+            color: Colors.teal, // background color
+            padding: EdgeInsets.all(16), // space inside the box
+            margin: EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  child: Text(
-                    'Name',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 2, 0, 10),
-                  child: Text(
-                    'Andrei Gabriel B. Comia',
-                    style: TextStyle(fontSize: 18
-                    ),
-                  ),
-                ),
+                Text('Hello'),
+                Text('hasdaj'),
+                Text('dasda')
 
-                Container(
-                  child: Text(
-                    'Email',
-                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 2, 0, 10),
-                  child: Text(
-                    'andreicomia7@gmail.com',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ),
-
-                Container(
-                  child: Text(
-                    'Company',
-                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 2, 0, 10),
-                  child: Text(
-                    'Batangas State University',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ),
-
-                Container(
-                  child: Text(
-                    'Contact Number',
-                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 2, 0, 10),
-                  child: Text(
-                    '09367070877',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ),
               ],
-            ),
+            ),// space outside the box
           ),
-          Center(
-            child: Column(
+          Container(
+            width: double.infinity,
+            height: 100,
+            color: Colors.teal, // background color
+            padding: EdgeInsets.all(16), // space inside the box
+            margin: EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 200, 0, 0),
-                  child:
-                  ElevatedButton(onPressed:(){}, child:
-                  Container(
-                    padding: EdgeInsets.fromLTRB(120, 20, 120, 20),
-                    child: Text('Logout')),
-                  ),
-                ),
-              ]
-            ),
-          )
+                Text('Hello'),
+                Text('hasdaj'),
+                Text('dasda')
 
+              ],
+            ),// space outside the box
+          ),
+
+          Container(
+            width: double.infinity,
+            height: 100,
+            color: Colors.teal, // background color
+            padding: EdgeInsets.all(16), // space inside the box
+            margin: EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Hello'),
+                Text('hasdaj'),
+                Text('dasda')
+
+              ],
+            ),// space outside the box
+          ),
         ],
       ),
     );
