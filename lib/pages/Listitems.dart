@@ -49,11 +49,17 @@ class _listItemsState extends State<listItems> {
           ),
         ),
       ),
-      body: Column(
-        children: fishList.map((fish) {
-          return FishCard(fish: fish);
-        }).toList(),
-      ),
+      body: Container(
+        margin: EdgeInsets.all(10),
+        child:
+        Column(
+          children: fishList.map((fish) {
+            return FishCard(fish: fish);
+          }).toList(),
+        ),
+      )
+
+
     );
   }
 }

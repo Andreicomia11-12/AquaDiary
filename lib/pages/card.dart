@@ -9,30 +9,45 @@ class FishCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 4,
-      margin: const EdgeInsets.all(10),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              fish.species,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
+      child: Column(
+        children: [
+          Container(
+            width: double.infinity,
+            height: 80,
+            padding: EdgeInsets.fromLTRB(10, 8, 10, 8),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2), // Shadow color
+                  spreadRadius: 2, // How much it spreads
+                  blurRadius: 6, // Softness of shadow
+                  offset: Offset(0, 3), // x and y direction
+                ),
+              ],
             ),
-            const SizedBox(height: 8),
-            Text(fish.description),
-            const SizedBox(height: 8),
-            Text(
-              'Care Tips: ${fish.careTips}',
-              style: const TextStyle(fontStyle: FontStyle.italic),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 80,
+                  height: 60,
+                  child: Image.asset('Assets/fish/guppy.png'),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(12, 8, 12, 8),
+                  child:
+                  Text(fish.species,
+                  style: TextStyle(
+                    fontSize: 20
+                  ),),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
+          )
+        ],
+      )
     );
   }
 }
