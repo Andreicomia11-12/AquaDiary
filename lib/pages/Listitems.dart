@@ -3,14 +3,14 @@ import 'package:aquadiary/pages/fish.dart';
 import 'package:aquadiary/pages/card.dart';
 import 'fish.dart';
 
-class listItems extends StatefulWidget {
-  const listItems({super.key});
+class ListItems extends StatefulWidget {
+  const ListItems({super.key});
 
   @override
-  State<listItems> createState() => _listItemsState();
+  State<ListItems> createState() => _ListItemsState();
 }
 
-class _listItemsState extends State<listItems> {
+class _ListItemsState extends State<ListItems> {
   @override
   List<Fish> fishList = [
     Fish(
@@ -57,9 +57,14 @@ class _listItemsState extends State<listItems> {
             return FishCard(fish: fish);
           }).toList(),
         ),
-      )
+      ),
 
-
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.pushNamed(context, '/add');
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
